@@ -21,5 +21,5 @@ This repository provides a PyTorch implementation of ClusterGCN as described in 
 
 > Pathfinder Discovery Networks for Neural Message Passing.
 > Wei-Lin Chiang, Xuanqing Liu, Si Si, Yang Li, Samy Bengio, Cho-Jui Hsieh.
-> KDD, 2019.
-> [[Paper]](https://arxiv.org/abs/1905.07953)
+> WebConf, 2021.
+> [[Paper]](https://arxiv.org/abs/2010.12878)
