@@ -4,7 +4,7 @@ PDN
  [![repo size](https://img.shields.io/github/repo-size/benedekrozemberczki/PDN.svg)](https://github.com/benedekrozemberczki/PDN/archive/master.zip)⠀
 
 <p align="center">
-  <img width="600" src="pdn.jpg">
+  <img width="600" src="pdn.jpeg">
 </p>
 
 A PyTorch implementation of "Pathfinder Discovery Networks for Neural Message Passing" (WebConf 2021).
