@@ -9,7 +9,7 @@ PDN
 
 
 <p align="center">
-  <img width="600" src="pdn.jpeg">
+  <img width="400" src="pdn.jpeg">
 </p>
 
 ### Abstract
