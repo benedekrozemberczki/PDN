@@ -1,13 +1,16 @@
 PDN
 ============================================
+
+
 [![Arxiv](https://img.shields.io/badge/ArXiv-2010.12878-orange.svg?color=blue)](https://arxiv.org/abs/2010.12878) [![codebeat badge](https://codebeat.co/badges/f7212651-50c6-40bd-9f4c-030ea56f43d3)](https://codebeat.co/projects/github-com-benedekrozemberczki-pdn-master)
  [![repo size](https://img.shields.io/github/repo-size/benedekrozemberczki/PDN.svg)](https://github.com/benedekrozemberczki/PDN/archive/master.zip)⠀
+ 
+ A PyTorch implementation of "Pathfinder Discovery Networks for Neural Message Passing" (WebConf 2021).
+
 
 <p align="center">
   <img width="600" src="pdn.jpeg">
 </p>
-
-A PyTorch implementation of "Pathfinder Discovery Networks for Neural Message Passing" (WebConf 2021).
 
 ### Abstract
 
@@ -16,7 +19,7 @@ In this work we propose Pathfinder Discovery Networks (PDNs), a method for joint
 
 This repository provides a PyTorch implementation of ClusterGCN as described in the paper:
 
-> Cluster-GCN: An Efficient Algorithm for Training Deep and Large Graph Convolutional Networks
+> Pathfinder Discovery Networks for Neural Message Passing.
 > Wei-Lin Chiang, Xuanqing Liu, Si Si, Yang Li, Samy Bengio, Cho-Jui Hsieh.
 > KDD, 2019.
 > [[Paper]](https://arxiv.org/abs/1905.07953)
