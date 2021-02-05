@@ -20,6 +20,6 @@ In this work we propose Pathfinder Discovery Networks (PDNs), a method for joint
 This repository provides a PyTorch implementation of ClusterGCN as described in the paper:
 
 > Pathfinder Discovery Networks for Neural Message Passing.
-> Wei-Lin Chiang, Xuanqing Liu, Si Si, Yang Li, Samy Bengio, Cho-Jui Hsieh.
+> Benedek Rozemberczki, Peter Englert, Amol Kapoor, Martin Blais, Bryan Perozzi.
 > WebConf, 2021.
 > [[Paper]](https://arxiv.org/abs/2010.12878)
