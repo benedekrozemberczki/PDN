@@ -121,11 +121,6 @@ Training a model with a different layer structure:
 ```sh
 $ python src/main.py --layers 64 64
 ```
-Training a random clustered model:
-```sh
-$ python src/main.py --clustering-method random
-```
-
 --------------------------------------------------------------------------------
 
 **License**
