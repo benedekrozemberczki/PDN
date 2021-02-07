@@ -103,10 +103,6 @@ Training a ClusterGCN model for a 100 epochs.
 ```sh
 $ python src/main.py --epochs 100
 ```
-Increasing the learning rate and the dropout.
-```sh
-$ python src/main.py --learning-rate 0.1 --dropout 0.9
-```
 Training a model with a different layer structure:
 ```sh
 $ python src/main.py --layers 64 64
