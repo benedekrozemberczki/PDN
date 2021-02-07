@@ -40,11 +40,6 @@ torch_scatter      1.0.4
 torch_cluster      1.1.5
 ```
 
-Installing metis on Ubuntu:
-
-```
-sudo apt-get install libmetis-dev
-```
 ### Datasets
 <p align="justify">
 The code takes the **edge list** of the graph in a csv file. Every row indicates an edge between two nodes separated by a comma. The first row is a header. Nodes should be indexed starting with 0. A sample graph for `Pubmed` is included in the  `input/` directory. In addition to the edgelist there is a csv file with the sparse features and another one with the target variable.</p>
