@@ -69,13 +69,13 @@ The **target vector** is a csv with two columns and headers, the first contains 
 
 ### Options
 <p align="justify">
-The training of a ClusterGCN model is handled by the `src/main.py` script which provides the following command line arguments.</p>
+The training of a PDN model is handled by the `src/main.py` script which provides the following command line arguments.</p>
 
 #### Input and output options
 ```
-  --edge-path       STR    Edge list csv.         Default is `input/edges.csv`.
+  --edge-path       STR    Edge list csv.        Default is `input/edges.csv`.
   --features-path   STR    Features csv.         Default is `input/features.csv`.
-  --target-path     STR    Target classes csv.    Default is `input/target.csv`.
+  --target-path     STR    Target classes csv.   Default is `input/target.csv`.
 ```
 #### Model options
 ```
