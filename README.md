@@ -96,7 +96,7 @@ The following commands learn a neural network and score on the test set. Trainin
 $ python src/main.py
 ```
 <p align="center">
-<img style="float: center;" src="clustergcn.gif">
+<img style="float: center;" src="pdn.gif">
 </p>
 
 Training a PDN model for a 100 epochs.
