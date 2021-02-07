@@ -99,7 +99,7 @@ $ python src/main.py
 <img style="float: center;" src="clustergcn.gif">
 </p>
 
-Training a ClusterGCN model for a 100 epochs.
+Training a PDN model for a 100 epochs.
 ```sh
 $ python src/main.py --epochs 100
 ```
