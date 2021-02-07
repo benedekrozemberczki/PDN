@@ -30,7 +30,7 @@ The codebase is implemented in Python 3.8.5. package versions used for developme
 ```
 tqdm               >=4.50.2
 numpy              >=1.19.2
-texttable          >=1.5.0
+texttable          >=1.6.3
 argparse           >=1.1.0
 torch              >=1.7.1
 torch-geometric    >=1.6.3
