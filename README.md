@@ -32,12 +32,12 @@ tqdm               >=4.28.1
 numpy              >=1.15.4
 texttable          >=1.5.0
 argparse           >=1.1.0
-torch              >=0.4.1
-torch-geometric    >=0.3.1
-torch_spline_conv  >=1.0.4
-torch_sparse       >=0.2.2
-torch_scatter      >=1.0.4
-torch_cluster      >=1.1.5
+torch              >=1.7.1
+torch-geometric    >=1.6.3
+torch_spline_conv  >=1.2.0
+torch_sparse       >=0.6.8
+torch_scatter      >=2.0.5
+torch_cluster      >=1.5.8
 ```
 
 ### Datasets
