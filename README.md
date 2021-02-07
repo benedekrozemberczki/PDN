@@ -29,7 +29,7 @@ This repository provides a PyTorch implementation of PDN as described in the pap
 The codebase is implemented in Python 3.8.5. package versions used for development are just below.
 ```
 tqdm               >=4.50.2
-numpy              >=1.15.4
+numpy              >=1.19.2
 texttable          >=1.5.0
 argparse           >=1.1.0
 torch              >=1.7.1
