@@ -26,7 +26,7 @@ This repository provides a PyTorch implementation of PDN as described in the pap
 
 
 ### Requirements
-The codebase is implemented in Python 3.5.2. package versions used for development are just below.
+The codebase is implemented in Python 3.8.5. package versions used for development are just below.
 ```
 tqdm               4.28.1
 numpy              1.15.4
