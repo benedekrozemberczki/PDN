@@ -28,16 +28,16 @@ This repository provides a PyTorch implementation of PDN as described in the pap
 ### Requirements
 The codebase is implemented in Python 3.8.5. package versions used for development are just below.
 ```
-tqdm               4.28.1
-numpy              1.15.4
-texttable          1.5.0
-argparse           1.1.0
-torch              0.4.1
-torch-geometric    0.3.1
-torch_spline_conv  1.0.4
-torch_sparse       0.2.2
-torch_scatter      1.0.4
-torch_cluster      1.1.5
+tqdm               >=4.28.1
+numpy              >=1.15.4
+texttable          >=1.5.0
+argparse           >=1.1.0
+torch              >=0.4.1
+torch-geometric    >=0.3.1
+torch_spline_conv  >=1.0.4
+torch_sparse       >=0.2.2
+torch_scatter      >=1.0.4
+torch_cluster      >=1.1.5
 ```
 
 ### Datasets
