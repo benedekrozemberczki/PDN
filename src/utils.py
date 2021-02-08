@@ -1,5 +1,7 @@
+import torch
 import numpy as np
 from texttable import Texttable
+from sklearn.model_selection import train_test_split
 
 def tab_printer(args):
     """
@@ -31,28 +33,30 @@ class PathfinderDataset(object):
         self._node_features_path = node_features_path
         self._edge_features_path = edge_features_path
         self._target_path = target_path
-    
-    def _read_edges(self):
+        
+    def read_dataset(self):
         self.edges = read_array(self._edges_path)
-        self.edge_count = self.edges.shape[1]
-
-    def _read_node_features(self):
         self.node_features = read_array(self._node_features_path)
-        self.node_count = self.node_features.shape[0]
-        self.node_feature_count = self.node_features.shape[1]
-        
-    def _read_edge_features(self):
         self.edge_features = read_array(self._edge_features_path)
-        self.edge_feature_count = self.edge_features.shape[1]
-        
-        
-    def _read_target(self):
         self.target = read_array(self._target_path)
-        self.number_of_classes = np.max(self.target) + 1
+        
+    def create_split(self, test_size, seed):
+        self.train_i, self.test_i = train_test_split(np.arange(self.node_features.shape), 
+                                                     test_size=test_size,
+                                                     random_state=seed)
         
         
     def get_dataset(self):
-        self._read_edges()
-        self._read_node_features()
-        self._read_edge_features()
-        self._read_target()
+    
+        dataset = {}
+        
+        dataset["edges"] = torch.LongTensor(self._edges)
+        dataset["node_features"] = torch.FloatTensor(self._node_features)
+        dataset["edge_features"] = torch.FloatTensor(self._edge_features)
+        dataset["target"] = torch.LongTensor(self._target)
+        
+        dataset["node_feature_count"] = self.node_features.shape[1]
+        dataset["edge_feature_count"] = self.edge_features.shape[1]
+        dataset["classes"] = np.max(self.target) + 1
+        return dataset
+         

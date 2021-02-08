@@ -14,7 +14,7 @@ def main():
                                 args.node_features_path,
                                 args.edge_features_path,
                                 args.target_path)
-    dataset.get_dataset()
+    dataset.read_dataset()
     #graph = graph_reader(args.edge_path)
     #features = feature_reader(args.features_path)
     #target = target_reader(args.target_path)
