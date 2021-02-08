@@ -30,7 +30,7 @@ def parameter_parser():
     parser.add_argument("--seed",
                         type = int,
                         default = 42,
-	                help = "Random seed for train-test split. Default is 42.")
+	                help = "Random seed. Default is 42.")
 
     parser.add_argument("--epochs",
                         type = int,
