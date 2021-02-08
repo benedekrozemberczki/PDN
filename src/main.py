@@ -1,5 +1,5 @@
 import torch
-from utils import tab_printer
+from utils import tab_printer, PathfinderDataset
 from param_parser import parameter_parser
 
 
@@ -10,6 +10,11 @@ def main():
     args = parameter_parser()
     torch.manual_seed(args.seed)
     tab_printer(args)
+    dataset = PathfinderDataset(args.edges_path,
+                                args.node_features_path,
+                                args.edge_features_path,
+                                args.target_path)
+    dataset.get_dataset()
     #graph = graph_reader(args.edge_path)
     #features = feature_reader(args.features_path)
     #target = target_reader(args.target_path)
