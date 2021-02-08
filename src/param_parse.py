@@ -2,7 +2,7 @@ import argparse
 
 def parameter_parser():
     """
-    A method to parse up command line parameters. By default it trains o a syntheticdataset.
+    A method to parse up command line parameters. By default it trains on a synthetic dataset.
     The default hyperparameters give a good quality representation without grid search.
     """
     parser = argparse.ArgumentParser(description = "Run .")
@@ -16,21 +16,27 @@ def parameter_parser():
                         nargs = "?",
                         default = "./input/features.csv",
 	                help = "Node features array.")
+	                
+    parser.add_argument("--edge-features-path",
+                        nargs = "?",
+                        default = "./input/features.csv",
+	                help = "Node features array.")	              
 
     parser.add_argument("--target-path",
                         nargs = "?",
                         default = "./input/target.csv",
 	                help = "Target classes array.")
-
-    parser.add_argument("--epochs",
-                        type = int,
-                        default = 200,
-	                help = "Number of training epochs. Default is 200.")
+	                
 
     parser.add_argument("--seed",
                         type = int,
                         default = 42,
 	                help = "Random seed for train-test split. Default is 42.")
+
+    parser.add_argument("--epochs",
+                        type = int,
+                        default = 200,
+	                help = "Number of training epochs. Default is 200.")
 
     parser.add_argument("--dropout",
                         type = float,
