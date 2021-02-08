@@ -3,9 +3,9 @@ import torch.nn.functional as F
 from torch_geometric.nn import GCNConv
 
 
-class AttentionNet(torch.nn.Module):
-    def __init__(self, node_features, edge_features, node_filters, edge_filters, classes):
-        super(AttentionNet, self).__init__()
+class PathfinderDiscoveryNetwork(torch.nn.Module):
+    def __init__(self, node_features, edge_features, classes, node_filters, edge_filters):
+        super(PathfinderDiscoveryNetwork, self).__init__()
         self.dense_1 = torch.nn.Linear(edge_features, edge_filters)
         self.dense_2 = torch.nn.Linear(edge_filters, 1)
         self.convolution_1 = GCNConv(node_features, node_filters)
