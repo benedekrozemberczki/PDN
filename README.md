@@ -32,7 +32,7 @@ If you find PDN useful in your research, please consider citing the following pa
 >@inproceedings{rozemberczki2021pdn,    
                 title={{Pathfinder Discovery Networks for Neural Message Passing}},    
                 author={Benedek Rozemberczki and Peter Englert and Amol Kapoor and Martin Blais and Bryan Perozzi},    
-                booktitle = {Proceedings of The Web Conference 2020},
+                booktitle = {Proceedings of The Web Conference 2021},
                 year={2021},    
                 organization={ACM}    
                 }
