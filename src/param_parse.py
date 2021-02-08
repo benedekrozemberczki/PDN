@@ -46,12 +46,5 @@ def parameter_parser():
                         type = float,
                         default = 0.9,
 	                help = "Test data ratio. Default is 0.1.")
-
-    parser.add_argument("--cluster-number",
-                        type = int,
-                        default = 10,
-                        help = "Number of clusters extracted. Default is 10.")
-
-    parser.set_defaults(layers = [16, 16, 16])
     
     return parser.parse_args()
