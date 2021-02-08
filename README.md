@@ -48,7 +48,7 @@ The training of a PDN model is handled by the `src/main.py` script which provide
 ```
   --edge-path            STR    Edge list NumPy array.        Default is `input/edges.npy`.
   --node-features-path   STR    Node features NumPy array.    Default is `input/node_features.npy`.
-  --edge-features-path   STR    Edge features NumPy array.    Default is `input/node_features.npy`.
+  --edge-features-path   STR    Edge features NumPy array.    Default is `input/edge_features.npy`.
   --target-path          STR    Target classes NumPy array.   Default is `input/target.npy`.
 ```
 #### Model options
