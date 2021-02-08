@@ -25,6 +25,20 @@ This repository provides a PyTorch implementation of PDN as described in the pap
 > [[Paper]](https://arxiv.org/abs/2010.12878)
 
 
+### Citing
+
+If you find PDN useful in your research, please consider citing the following paper:
+```bibtex
+>@inproceedings{rozemberczki2021pdn,    
+                title={{GEMSEC: Graph Embedding with Self Clustering}},    
+                author={Rozemberczki, Benedek and Davies, Ryan and Sarkar, Rik and Sutton, Charles},    
+                booktitle={Proceedings of the 2019 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining 2019},
+                year={2021},    
+                organization={ACM}    
+                }
+
+```
+
 ### Requirements
 The codebase is implemented in Python 3.8.5. package versions used for development are just below.
 ```
