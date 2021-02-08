@@ -37,10 +37,15 @@ def parameter_parser():
                         default = 200,
 	                help = "Number of training epochs. Default is 200.")
 
-    parser.add_argument("--dropout",
+    parser.add_argument("--gcn-dropout",
                         type = float,
                         default = 0.5,
-	                help = "Dropout parameter. Default is 0.5.")
+	                help = "GCN layer dropout parameter. Default is 0.5.")
+
+    parser.add_argument("--pdn-dropout",
+                        type = float,
+                        default = 0.5,
+	                help = "PDN layer dropout parameter. Default is 0.5.")	                     
 
     parser.add_argument("--learning-rate",
                         type = float,
