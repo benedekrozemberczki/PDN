@@ -41,9 +41,10 @@ class PathfinderDataset(object):
         self.target = read_array(self._target_path)
         
     def create_split(self, test_size, seed):
-        self.train_i, self.test_i = train_test_split(np.arange(self.node_features.shape), 
-                                                     test_size=test_size,
-                                                     random_state=seed)
+        indices = np.arange(self.node_features.shape)
+        self._train_index, self._test_index = train_test_split(indices, 
+                                                               test_size=test_size,
+                                                               random_state=seed)
         
         
     def get_dataset(self):
@@ -54,6 +55,8 @@ class PathfinderDataset(object):
         dataset["node_features"] = torch.FloatTensor(self._node_features)
         dataset["edge_features"] = torch.FloatTensor(self._edge_features)
         dataset["target"] = torch.LongTensor(self._target)
+        dataset["train_index"] = torch.LongTensor(self._train_index)
+        dataset["test_index"] = torch.LongTensor(self._test_index)
         
         dataset["node_feature_count"] = self.node_features.shape[1]
         dataset["edge_feature_count"] = self.edge_features.shape[1]
