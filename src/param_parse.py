@@ -7,7 +7,7 @@ def parameter_parser():
     """
     parser = argparse.ArgumentParser(description = "Run .")
 
-    parser.add_argument("--edge-path",
+    parser.add_argument("--edges-path",
                         nargs = "?",
                         default = "./input/edges.csv",
 	                help = "Edges array.")
@@ -20,14 +20,13 @@ def parameter_parser():
     parser.add_argument("--edge-features-path",
                         nargs = "?",
                         default = "./input/features.csv",
-	                help = "Node features array.")	              
+	                help = "Edge features array.")	              
 
     parser.add_argument("--target-path",
                         nargs = "?",
                         default = "./input/target.csv",
 	                help = "Target classes array.")
 	                
-
     parser.add_argument("--seed",
                         type = int,
                         default = 42,
