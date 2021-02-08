@@ -57,6 +57,8 @@ The training of a PDN model is handled by the `src/main.py` script which provide
   --epochs              INT     Number of training epochs.     Default is 200.
   --test-size           FLOAT   Training set ratio.            Default is 0.9.
   --learning-rate       FLOAT   Adam learning rate.            Default is 0.01.
+  --edge-filters        INT     Number of PDN filters.         Default is 32.
+  --node-filters        INT     Number of GCN filters.         Default is 32.
 ```
 ### Examples
 <p align="justify">

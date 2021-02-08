@@ -11,6 +11,7 @@ def main():
     args = parameter_parser()
     torch.manual_seed(args.seed)
     tab_printer(args)
+    
     reader = PathfinderDatasetReader(args.edges_path,
                                      args.node_features_path,
                                      args.edge_features_path,
@@ -18,6 +19,7 @@ def main():
     reader.read_dataset()
     reader.create_split(args.test_size, args.seed)
     dataset = reader.get_dataset()
+    
     model = PathfinderDiscoveryNetwork(dataset["node_feature_count"],
                                        dataset["edge_feature_count"],
                                        dataset["classes"],
