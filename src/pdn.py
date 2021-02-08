@@ -33,7 +33,10 @@ class Trainer(object):
         model.train()
         for epoch in tqdm(range(self.epochs)):
             optimizer.zero_grad()
-            prediction = model(dataset["node_features"], dataset["edges"], dataset["edge_features"])
+            prediction = model(dataset["node_features"],
+                               dataset["edges"],
+                               dataset["edge_features"])
+                               
             loss = F.nll_loss(prediction[dataset["train_index"]], dataset["target"][dataset["train_index"]])
             loss.backward()
             optimizer.step()
