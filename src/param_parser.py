@@ -40,12 +40,12 @@ def parameter_parser():
     parser.add_argument("--edge-filters",
                         type = int,
                         default = 32,
-	                help = "GCN layer dropout parameter. Default is 0.5.")
+	                help = "PDN layer filters. Default is 32.")
 
     parser.add_argument("--node-filters",
                         type = int,
                         default = 32,
-	                help = "PDN layer dropout parameter. Default is 0.5.")	                     
+	                help = "GCN layer filters. Default is 32.")	                     
 
     parser.add_argument("--learning-rate",
                         type = float,
@@ -55,6 +55,6 @@ def parameter_parser():
     parser.add_argument("--test-size",
                         type = float,
                         default = 0.9,
-	                help = "Test data ratio. Default is 0.1.")
+	                help = "Test data ratio. Default is 0.9.")
     
     return parser.parse_args()
