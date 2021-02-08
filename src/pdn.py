@@ -1,4 +1,5 @@
 import torch
+from tqdm import tqdm
 import torch.nn.functional as F
 from torch_geometric.nn import GCNConv
 
@@ -19,3 +20,25 @@ class PathfinderDiscoveryNetwork(torch.nn.Module):
         x = F.dropout(x, training=self.training)
         x = self.convolution_2(x, edge_index, edge_x)
         return F.log_softmax(x, dim=1)
+        
+        
+class Trainer(object):
+    def __init__(self, epochs, learning_rate):
+        self.epochs = epochs
+        self.learning_rate = learning_rate
+        
+    def train_model(self, model, dataset):
+        print("Training started.\n")
+        optimizer = torch.optim.Adam(model.parameters(), lr=self.learning_rate)
+        model.train()
+        for epoch in tqdm(range(self.epochs)):
+            optimizer.zero_grad()
+            prediction = model(dataset["node_features"], dataset["edges"], dataset["edge_features"])
+            loss = F.nll_loss(prediction[dataset["train_index"]], dataset["target"][dataset["train_index"]])
+            loss.backward()
+            optimizer.step()
+        model.eval()
+        _, prediction = model(dataset["node_features"], dataset["edges"], dataset["edge_features"]).max(dim=1)
+        correct = int(prediction[dataset["test_index"]].eq(dataset["target"][dataset["test_index"]]).sum().item())
+        acc = correct / int(dataset["test_index"].shape[0])
+        print('\nAccuracy: {:.4f}'.format(acc))

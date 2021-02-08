@@ -24,7 +24,7 @@ def read_array(path):
     data = np.load(path)
     return data
     
-class PathfinderDataset(object):
+class PathfinderDatasetReader(object):
 
     def __init__(self, edges_path, node_features_path,
                  edge_features_path, target_path):
@@ -35,13 +35,13 @@ class PathfinderDataset(object):
         self._target_path = target_path
         
     def read_dataset(self):
-        self.edges = read_array(self._edges_path)
-        self.node_features = read_array(self._node_features_path)
-        self.edge_features = read_array(self._edge_features_path)
-        self.target = read_array(self._target_path)
+        self._edges = read_array(self._edges_path)
+        self._node_features = read_array(self._node_features_path)
+        self._edge_features = read_array(self._edge_features_path)
+        self._target = read_array(self._target_path)
         
     def create_split(self, test_size, seed):
-        indices = np.arange(self.node_features.shape)
+        indices = np.arange(self._node_features.shape[0])
         self._train_index, self._test_index = train_test_split(indices, 
                                                                test_size=test_size,
                                                                random_state=seed)
@@ -58,8 +58,8 @@ class PathfinderDataset(object):
         dataset["train_index"] = torch.LongTensor(self._train_index)
         dataset["test_index"] = torch.LongTensor(self._test_index)
         
-        dataset["node_feature_count"] = self.node_features.shape[1]
-        dataset["edge_feature_count"] = self.edge_features.shape[1]
-        dataset["classes"] = np.max(self.target) + 1
+        dataset["node_feature_count"] = self._node_features.shape[1]
+        dataset["edge_feature_count"] = self._edge_features.shape[1]
+        dataset["classes"] = np.max(self._target) + 1
         return dataset
          
