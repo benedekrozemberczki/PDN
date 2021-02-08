@@ -1,5 +1,5 @@
 import torch
-#from utils import tab_printer
+from utils import tab_printer
 from param_parser import parameter_parser
 
 
@@ -9,7 +9,7 @@ def main():
     """
     args = parameter_parser()
     torch.manual_seed(args.seed)
-  #  tab_printer(args)
+    tab_printer(args)
     #graph = graph_reader(args.edge_path)
     #features = feature_reader(args.features_path)
     #target = target_reader(args.target_path)
