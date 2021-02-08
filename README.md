@@ -30,9 +30,9 @@ This repository provides a PyTorch implementation of PDN as described in the pap
 If you find PDN useful in your research, please consider citing the following paper:
 ```bibtex
 >@inproceedings{rozemberczki2021pdn,    
-                title={{GEMSEC: Graph Embedding with Self Clustering}},    
-                author={Rozemberczki, Benedek and Davies, Ryan and Sarkar, Rik and Sutton, Charles},    
-                booktitle={Proceedings of the 2019 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining 2019},
+                title={{Pathfinder Discovery Networks for Neural Message Passing}},    
+                author={Benedek Rozemberczki and Peter Englert and Amol Kapoor and Martin Blais and Bryan Perozzi},    
+                booktitle = {Proceedings of The Web Conference 2020},
                 year={2021},    
                 organization={ACM}    
                 }
