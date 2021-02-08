@@ -10,22 +10,17 @@ def parameter_parser():
     parser.add_argument("--edge-path",
                         nargs = "?",
                         default = "./input/edges.csv",
-	                help = "Edge list csv.")
+	                help = "Edges array.")
 
-    parser.add_argument("--features-path",
+    parser.add_argument("--node-features-path",
                         nargs = "?",
                         default = "./input/features.csv",
-	                help = "Features json.")
+	                help = "Node features array.")
 
     parser.add_argument("--target-path",
                         nargs = "?",
                         default = "./input/target.csv",
-	                help = "Target classes csv.")
-
-    parser.add_argument("--clustering-method",
-                        nargs = "?",
-                        default = "metis",
-	                help = "Clustering method for graph decomposition. Default is the metis procedure.")
+	                help = "Target classes array.")
 
     parser.add_argument("--epochs",
                         type = int,
