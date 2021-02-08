@@ -2,7 +2,7 @@ import argparse
 
 def parameter_parser():
     """
-    A method to parse up command line parameters. By default it trains o a syntheticdataset.
+    A method to parse up command line parameters. By default it trains on the PubMed dataset.
     The default hyperparameters give a good quality representation without grid search.
     """
     parser = argparse.ArgumentParser(description = "Run .")
