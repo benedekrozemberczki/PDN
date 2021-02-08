@@ -40,33 +40,6 @@ torch_scatter      >=2.0.5
 torch_cluster      >=1.5.8
 ```
 
-### Datasets
-<p align="justify">
-The code takes the **edge list** of the graph in a csv file. Every row indicates an edge between two nodes separated by a comma. The first row is a header. Nodes should be indexed starting with 0. A sample graph for `Pubmed` is included in the  `input/` directory. In addition to the edgelist there is a csv file with the sparse features and another one with the target variable.</p>
-<p align="justify">
-The **feature matrix** is a sparse one and it is stored as a csv. Features are indexed from 0 consecutively. The feature matrix csv is structured as:</p>
-
-| **NODE ID**|**FEATURE ID**|**Value** |
-| --- | --- |---|
-| 0 | 3 |0.2|
-| 0 | 7 | 0.5 |
-| 1 | 17 | 0.8 |
-| 1 | 4 | 5.4 |
-| 1 | 38 | 1.3 |
-| ... | ... |...|
-| n | 3 | 0.9 |
-<p align="justify">
-The **target vector** is a csv with two columns and headers, the first contains the node identifiers the second the targets. This csv is sorted by node identifiers and the target column contains the class meberships indexed from zero.</p>
-
-| **NODE ID**|**Target** |
-| --- | --- |
-| 0 | 3 |
-| 1 | 1 |
-| 2 | 0 |
-| 3 | 1 |
-| ... | ... |
-| n | 3 |
-
 ### Options
 <p align="justify">
 The training of a PDN model is handled by the `src/main.py` script which provides the following command line arguments.</p>
@@ -79,14 +52,10 @@ The training of a PDN model is handled by the `src/main.py` script which provide
 ```
 #### Model options
 ```
-  --clustering-method   STR     Clustering method.             Default is `metis`.
-  --cluster-number      INT     Number of clusters.            Default is 10. 
   --seed                INT     Random seed.                   Default is 42.
   --epochs              INT     Number of training epochs.     Default is 200.
-  --test-ratio          FLOAT   Training set ratio.            Default is 0.9.
+  --test-size           FLOAT   Training set ratio.            Default is 0.9.
   --learning-rate       FLOAT   Adam learning rate.            Default is 0.01.
-  --dropout             FLOAT   Dropout rate value.            Default is 0.5.
-  --layers              LST     Layer sizes.                   Default is [16, 16, 16]. 
 ```
 ### Examples
 <p align="justify">
@@ -95,17 +64,13 @@ The following commands learn a neural network and score on the test set. Trainin
 ```sh
 $ python src/main.py
 ```
-<p align="center">
-<img style="float: center;" src="pdn.gif">
-</p>
-
 Training a PDN model for a 100 epochs.
 ```sh
 $ python src/main.py --epochs 100
 ```
 Training a model with a different layer structure:
 ```sh
-$ python src/main.py --layers 64 64
+$ python src/main.py --node-filters 16
 ```
 --------------------------------------------------------------------------------
 
