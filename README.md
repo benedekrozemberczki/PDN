@@ -94,3 +94,5 @@ $ python src/main.py --node-filters 16
 **License**
 
 - [GNU](https://github.com/benedekrozemberczki/ClusterGCN/blob/master/LICENSE)
+
+--------------------------------------------------------------------------------
