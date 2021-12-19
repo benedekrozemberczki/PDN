@@ -1,6 +1,4 @@
 ## PDN
- 
---------------------------------------
 
 [![Arxiv](https://img.shields.io/badge/ArXiv-2010.12878-orange.svg?color=blue)](https://arxiv.org/abs/2010.12878) [![codebeat badge](https://codebeat.co/badges/f7212651-50c6-40bd-9f4c-030ea56f43d3)](https://codebeat.co/projects/github-com-benedekrozemberczki-pdn-master)
  [![repo size](https://img.shields.io/github/repo-size/benedekrozemberczki/PDN.svg)](https://github.com/benedekrozemberczki/PDN/archive/master.zip)⠀[![benedekrozemberczki](https://img.shields.io/twitter/follow/benrozemberczki?style=social&logo=twitter)](https://twitter.com/intent/follow?screen_name=benrozemberczki)
@@ -88,10 +86,10 @@ Training a model with a different layer structure:
 ```sh
 $ python src/main.py --node-filters 16
 ```
---------------------------------------------------------------------------------
+------------------------------------------------------------
 
 **License**
 
 - [GNU](https://github.com/benedekrozemberczki/ClusterGCN/blob/master/LICENSE)
 
---------------------------------------------------------------------------------
+------------------------------------------------------------
